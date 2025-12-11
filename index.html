@@ -8,79 +8,62 @@
 </head>
 <body>
 
-<header>
-    <img src="logo-short.svg" class="logo-small fade-block">
+<header class="header-logo">
+    <img src="logo-short.svg" alt="Logo">
 </header>
 
-<section class="hero fade-block">
-    <div class="hero-parallax">
-        <img src="hero.jpg" class="hero-img">
-        <div class="texture"></div>
-    </div>
-    <h1 class="title">Вокальная студия СПЕКТР</h1>
-    <p class="subtitle">Проявляйся в массы</p>
-    <a href="https://dikidi.ru/ru/profile/vokalnaya_studiya_spektr_1771715" class="cta">Записаться</a>
+<section class="hero">
+    <img src="hero.jpg" class="hero-img" alt="Hero">
+    <h1>Вокальная студия СПЕКТР</h1>
+    <h2>Проявляйся в массы</h2>
+    <a href="https://dikidi.ru/ru/profile/vokalnaya_studiya_spektr_1771715" class="btn-yellow">Записаться</a>
 </section>
 
-<section class="why fade-block">
-    <div class="why-box">
-        <h2>Почему выбирают нас?</h2>
-        <ul>
-            <li>✦ 200+ учеников</li>
-            <li>✦ Управление голосом за 1 месяц</li>
-            <li>✦ Запись первых треков</li>
-            <li>✦ Подготовка к сцене</li>
-            <li>✦ Работа со страхами и раскрытие голоса</li>
-        </ul>
-    </div>
+<section class="why fade-in">
+    <div class="line"></div>
+    <h2>Почему выбирают нас?</h2>
+    <ul>
+        <li>✦ 200+ учеников</li>
+        <li>✦ Научим управлять голосом за 1 месяц</li>
+        <li>✦ Помогаем выпускать первые треки</li>
+        <li>✦ Готовим к первому сценическому выступлению</li>
+        <li>✦ Помогаем преодолеть страх сцены через психологию</li>
+    </ul>
+    <div class="line"></div>
 </section>
 
-<section class="social fade-block">
+<section class="social fade-in">
     <h2>Мы в соц.сетях</h2>
     <div class="social-buttons">
-        <a href="https://t.me/spektrvocal" class="btn-social">Telegram</a>
-        <a href="https://vk.com/spektrvocal" class="btn-social">VK</a>
-        <a href="https://www.instagram.com/spektr.vocal" class="btn-social">Instagram</a>
+        <a href="#" class="btn-social">Telegram</a>
+        <a href="#" class="btn-social">VK</a>
+        <a href="#" class="btn-social">Instagram</a>
     </div>
 </section>
 
-<section class="teachers fade-block">
+<section class="teachers fade-in">
     <h2>Педагоги</h2>
-    <div class="teachers-row">
-        <img src="teacher1.jpg" class="teacher-img hover-zoom">
-        <img src="teacher2.jpg" class="teacher-img hover-zoom">
-        <img src="teacher3.jpg" class="teacher-img hover-zoom">
+    <div class="grid premium-grid">
+        <img src="teacher1.jpg">
+        <img src="teacher2.jpg">
+        <img src="teacher3.jpg">
     </div>
 </section>
 
-<section class="stage fade-block">
+<section class="stage fade-in">
     <h2>Ученики на сцене</h2>
-    <div class="stage-row">
-        <img src="stage1.jpg" class="stage-img fade-block">
-        <img src="stage2.jpg" class="stage-img fade-block">
-        <img src="stage3.jpg" class="stage-img fade-block">
-        <img src="stage4.jpg" class="stage-img fade-block">
+    <div class="grid premium-grid">
+        <img src="stage1.jpg">
+        <img src="stage2.jpg">
+        <img src="stage3.jpg">
+        <img src="stage4.jpg">
     </div>
 </section>
 
-<footer class="fade-block">
-    <img src="logo-full.svg" class="logo-full">
+<footer class="footer">
+    <img src="logo-full.svg" class="footer-logo">
     <p>СПЕКТР · 2025</p>
 </footer>
-
-<script>
-// fade-in animation on scroll
-const faders = document.querySelectorAll('.fade-block');
-const appearOptions = { threshold: 0.2 };
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
- entries.forEach(entry=>{
-   if(!entry.isIntersecting) return;
-   entry.target.classList.add("appear");
-   observer.unobserve(entry.target);
- });
-}, appearOptions);
-faders.forEach(f=>appearOnScroll.observe(f));
-</script>
 
 </body>
 </html>
