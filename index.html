@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вокальная студия СПЕКТР</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="logo-short.svg" class="logo-small fade-block">
+</header>
+
+<section class="hero fade-block">
+    <div class="hero-parallax">
+        <img src="hero.jpg" class="hero-img">
+        <div class="texture"></div>
+    </div>
+    <h1 class="title">Вокальная студия СПЕКТР</h1>
+    <p class="subtitle">Проявляйся в массы</p>
+    <a href="https://dikidi.ru/ru/profile/vokalnaya_studiya_spektr_1771715" class="cta">Записаться</a>
+</section>
+
+<section class="why fade-block">
+    <div class="why-box">
+        <h2>Почему выбирают нас?</h2>
+        <ul>
+            <li>✦ 200+ учеников</li>
+            <li>✦ Управление голосом за 1 месяц</li>
+            <li>✦ Запись первых треков</li>
+            <li>✦ Подготовка к сцене</li>
+            <li>✦ Работа со страхами и раскрытие голоса</li>
+        </ul>
+    </div>
+</section>
+
+<section class="social fade-block">
+    <h2>Мы в соц.сетях</h2>
+    <div class="social-buttons">
+        <a href="https://t.me/spektrvocal" class="btn-social">Telegram</a>
+        <a href="https://vk.com/spektrvocal" class="btn-social">VK</a>
+        <a href="https://www.instagram.com/spektr.vocal" class="btn-social">Instagram</a>
+    </div>
+</section>
+
+<section class="teachers fade-block">
+    <h2>Педагоги</h2>
+    <div class="teachers-row">
+        <img src="teacher1.jpg" class="teacher-img hover-zoom">
+        <img src="teacher2.jpg" class="teacher-img hover-zoom">
+        <img src="teacher3.jpg" class="teacher-img hover-zoom">
+    </div>
+</section>
+
+<section class="stage fade-block">
+    <h2>Ученики на сцене</h2>
+    <div class="stage-row">
+        <img src="stage1.jpg" class="stage-img fade-block">
+        <img src="stage2.jpg" class="stage-img fade-block">
+        <img src="stage3.jpg" class="stage-img fade-block">
+        <img src="stage4.jpg" class="stage-img fade-block">
+    </div>
+</section>
+
+<footer class="fade-block">
+    <img src="logo-full.svg" class="logo-full">
+    <p>СПЕКТР · 2025</p>
+</footer>
+
+<script>
+// fade-in animation on scroll
+const faders = document.querySelectorAll('.fade-block');
+const appearOptions = { threshold: 0.2 };
+const appearOnScroll = new IntersectionObserver(function(entries, observer){
+ entries.forEach(entry=>{
+   if(!entry.isIntersecting) return;
+   entry.target.classList.add("appear");
+   observer.unobserve(entry.target);
+ });
+}, appearOptions);
+faders.forEach(f=>appearOnScroll.observe(f));
+</script>
+
+</body>
+</html>
