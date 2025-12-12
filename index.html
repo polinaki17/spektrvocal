@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <div class="scroll-glow"></div>
+   <div class="diagonal-shimmer"></div>
 <header>
     <img src="logo-short.svg" class="logo-short fade-block">
 </header>
@@ -77,26 +77,12 @@
 </footer>
     
 <script>
-const faders = document.querySelectorAll('.fade-block');
-const appearOptions = { threshold: 0.2 };
-
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
- entries.forEach(entry=>{
-   if(!entry.isIntersecting) return;
-   entry.target.classList.add("appear");
-   observer.unobserve(entry.target);
- });
-}, appearOptions);
-
-faders.forEach(f => appearOnScroll.observe(f));
-</script>
-
-    <script>
-const glow = document.querySelector('.scroll-glow');
+const shimmer = document.querySelector('.diagonal-shimmer');
 
 window.addEventListener('scroll', () => {
-    const offset = window.scrollY * 0.15;
-    glow.style.transform = `translateY(${offset}px)`;
+    const offset = window.scrollY * 0.10;       // скорость диагонального смещения
+    const offsetX = window.scrollY * 0.05;      // лёгкий X-сдвиг
+    shimmer.style.transform = `translate(${offsetX}px, ${offset}px)`;
 });
 </script>
     
