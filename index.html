@@ -13,8 +13,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-   <div class="diagonal-shimmer"></div>
+    
 <header>
     <img src="logo-short.svg" class="logo-short fade-block">
 </header>
@@ -75,16 +74,6 @@
     <img src="logo-full.svg" class="logo-full">
     <p>СПЕКТР · 2025</p>
 </footer>
-    
-<script>
-const shimmer = document.querySelector('.diagonal-shimmer');
 
-window.addEventListener('scroll', () => {
-    const offset = window.scrollY * 0.10;       // скорость диагонального смещения
-    const offsetX = window.scrollY * 0.05;      // лёгкий X-сдвиг
-    shimmer.style.transform = `translate(${offsetX}px, ${offset}px)`;
-});
-</script>
-    
 </body>
 </html>
