@@ -144,8 +144,14 @@ body{
     margin-top:50px;
 }
 .stage-img{
-    width:28%;
-    border-radius:14px;
+    width:26%;              /* как у педагогов */
+    height:420px;           /* фиксированная высота = точно как у teacher-img */
+    object-fit:cover;       /* обрезание по краям, как у педагогов */
+    border-radius:16px;     /* чуть крупнее, чтобы соответствовало */
+    transition:.4s;
+}
+.stage-img:hover{
+    transform:scale(1.06);  /* такой же hover-эффект */
 }
 
 /* FOOTER */
@@ -173,7 +179,7 @@ footer p{
 /* MOBILE */
 @media(max-width:768px){
     .teacher-img{ width:30%; }
-    .stage-img{ width:40%; }
+    .stage-img{ width:30%; }
     .title{ font-size:20px; }
     .hero-img{ width:80%; }
 }
