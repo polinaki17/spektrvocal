@@ -1,0 +1,177 @@
+@font-face {
+    font-family:'UNCAGE';
+    src:url('UNCAGE-Regular.ttf') format('truetype');
+    font-weight:400;
+}
+@font-face {
+    font-family:'UNCAGE';
+    src:url('UNCAGE-Medium.ttf') format('truetype');
+    font-weight:500;
+}
+@font-face {
+    font-family:'UNCAGE';
+    src:url('UNCAGE-Bold.ttf') format('truetype');
+    font-weight:700;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    margin:0;
+    font-family:'UNCAGE', sans-serif;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+/* LOGO TOP */
+.logo-short{
+    width:60px;
+    margin-top:16px;
+    opacity:.9;
+}
+
+/* HERO */
+.hero-img{
+    width:70%;
+    margin:0 auto;
+    display:block;
+    border-radius:30px;
+    height:auto;
+}
+
+.title{
+    font-size:24px;
+    margin-top:18px;
+    font-weight:700;
+}
+.subtitle{
+    font-size:14px;
+    margin-top:-4px;
+    opacity:.45;
+    margin-bottom:10px;
+}
+
+/* CTA BUTTON */
+.cta{
+    background:#F2B705;
+    color:#fff;
+    padding:12px 30px;
+    font-size:16px;
+    border-radius:40px;
+    display:inline-block;
+    text-decoration:none;
+    margin-top:10px;
+    font-weight:500;
+}
+
+/* WHY SECTION */
+.why-box{
+    background:rgba(255,255,255,0.06);
+    border-radius:18px;
+    width:85%;
+    margin:50px auto;
+    padding:30px 14px;
+}
+
+.why-title{
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:16px;
+}
+
+.why-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.why-list li{
+    position:relative;
+    padding-left:22px;
+    margin:14px 0;
+    font-size:15px;
+    font-weight:500;
+    line-height:1.4;
+    text-align:center;
+}
+
+.why-list li::before{
+    content:'✦';
+    position:absolute;
+    left:0;
+    top:0;
+    color:#F2B705;
+    font-size:14px;
+    padding-right:14px;
+}
+
+/* SOCIAL */
+.btn-social{
+    display:inline-block;
+    background:#fff;
+    color:#000;
+    padding:12px 26px;
+    border-radius:40px;
+    margin:6px;
+    text-decoration:none!important;
+    font-size:15px;
+    font-weight:400;
+}
+.btn-social:hover{ background:#EDEDED; }
+
+/* TEACHERS */
+.teachers-row{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:50px;
+}
+.teacher-img{
+    width:26%;
+    border-radius:16px;
+    transition:.4s;
+}
+.hover-zoom:hover{ transform:scale(1.06); }
+
+/* STAGE */
+.stage-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+    margin-top:50px;
+}
+.stage-img{
+    width:28%;
+    border-radius:14px;
+}
+
+/* FOOTER */
+.logo-full{
+    width:100px;
+    margin-top:50px;
+    opacity:.8;
+}
+footer p{
+    opacity:.6;
+    font-size:13px;
+}
+
+/* ANIMATIONS */
+.fade-block{
+    opacity:0;
+    transform:translateY(25px);
+    transition:.9s ease;
+}
+.appear{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .teacher-img{ width:30%; }
+    .stage-img{ width:40%; }
+    .title{ font-size:20px; }
+    .hero-img{ width:80%; }
+}
