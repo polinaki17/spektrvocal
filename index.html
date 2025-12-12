@@ -75,7 +75,7 @@
     <img src="logo-full.svg" class="logo-full">
     <p>СПЕКТР · 2025</p>
 </footer>
-
+    
 <script>
 const faders = document.querySelectorAll('.fade-block');
 const appearOptions = { threshold: 0.2 };
@@ -91,5 +91,14 @@ const appearOnScroll = new IntersectionObserver(function(entries, observer){
 faders.forEach(f => appearOnScroll.observe(f));
 </script>
 
+    <script>
+const glow = document.querySelector('.scroll-glow');
+
+window.addEventListener('scroll', () => {
+    const offset = window.scrollY * 0.15;
+    glow.style.transform = `translateY(${offset}px)`;
+});
+</script>
+    
 </body>
 </html>
