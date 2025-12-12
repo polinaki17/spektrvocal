@@ -176,6 +176,55 @@ footer p{
     transform:translateY(0);
 }
 
+/* FLOATING SOCIAL BUTTONS */
+.btn-social {
+    display:inline-block;
+    background:#fff;
+    color:#000;
+    padding:12px 26px;
+    border-radius:40px;
+    margin:6px;
+    text-decoration:none!important;
+    font-size:15px;
+    font-weight:400;
+    position:relative;
+    animation:floatA 4.5s ease-in-out infinite;
+    will-change: transform;
+}
+
+/* индивидуальный тайминг для каждой кнопки */
+.btn-social:nth-child(2){
+    animation:floatB 5.2s ease-in-out infinite;
+}
+.btn-social:nth-child(3){
+    animation:floatC 4.8s ease-in-out infinite;
+}
+
+/* плавание */
+@keyframes floatA {
+    0%   { transform:translateY(0); }
+    50%  { transform:translateY(-6px); }
+    100% { transform:translateY(0); }
+}
+
+@keyframes floatB {
+    0%   { transform:translateY(0); }
+    50%  { transform:translateY(-4px); }
+    100% { transform:translateY(0); }
+}
+
+@keyframes floatC {
+    0%   { transform:translateY(0); }
+    50%  { transform:translateY(-7px); }
+    100% { transform:translateY(0); }
+}
+
+/* hover — приятный микроэффект */
+.btn-social:hover{
+    background:#EDEDED;
+    transform:translateY(-3px) scale(1.02);
+}
+
 /* MOBILE */
 @media(max-width:768px){
     .teacher-img{ width:30%; }
