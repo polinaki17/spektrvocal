@@ -75,5 +75,21 @@
     <p>СПЕКТР · 2025</p>
 </footer>
 
+    <script>
+const blocks = document.querySelectorAll('.fade-block');
+
+function revealOnScroll() {
+  blocks.forEach(block => {
+    const rect = block.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 80) {
+        block.classList.add('appear');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+</script>
+    
 </body>
 </html>
