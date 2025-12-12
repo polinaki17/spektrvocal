@@ -80,29 +80,31 @@ body{
 }
 
 .why-list{
-    list-style:none;
+    margin:0 auto;
     padding:0;
-    margin:0;
+    width:80%; /* красиво центрируется */
 }
 
 .why-list li{
+    list-style:none;
     position:relative;
-    padding-left:22px;
-    margin:14px 0;
-    font-size:15px;
-    font-weight:500;
-    line-height:1.4;
-    text-align:center;
+    padding-left:22px; /* расстояние между точкой и текстом */
+    margin:10px 0;
+    font-size:17px;
+    font-weight:400;
+    color:#fff;
+    line-height:1.35;
+    text-align:left; /* строго как в примере */
 }
 
 .why-list li::before{
-    content:'✦';
+    content:"•"; /* маркер как на твоём примере */
     position:absolute;
     left:0;
     top:0;
-    color:#F2B705;
-    font-size:14px;
-    padding-right:14px;
+    font-size:20px;
+    color:#ffffff;
+    opacity:0.9; /* мягкий, премиальный */
 }
 
 /* SOCIAL */
