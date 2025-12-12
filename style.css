@@ -25,7 +25,7 @@ body{
 
 /* LOGO TOP */
 .logo-short{
-    width:60px;
+    width:50px;
     margin-top:16px;
     opacity:.9;
 }
@@ -148,7 +148,7 @@ body{
 
 /* FOOTER */
 .logo-full{
-    width:100px;
+    width:120px;
     margin-top:50px;
     opacity:.8;
 }
